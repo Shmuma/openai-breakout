@@ -42,11 +42,11 @@ class runner(object):
         input = [s.read() for s in states]
 
         def random_choice(p):
-            ra_alpha = 0.1
-            random_choice = np.random.choice([True, False], p=[ra_alpha, 1.-ra_alpha])
-
-            if random_choice:
-                return np.random.randint(0, len(p))
+            # ra_alpha = 0.1
+            # random_choice = np.random.choice([True, False], p=[ra_alpha, 1.-ra_alpha])
+            #
+            # if random_choice:
+            #     return np.random.randint(0, len(p))
 
             return np.random.choice(len(p), p=p)
 
