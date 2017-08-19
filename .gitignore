@@ -4,5 +4,5 @@ pg-karpathy.py
 grad.py
 .*.sw*
 *.pyc
-saves
+save
 .idea
