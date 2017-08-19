@@ -17,12 +17,12 @@ class breakout(object):
         c.put('history_size', 100)
         c.put('env_num', args.env_num)
 
-        c.put('learning_rate_start', 24e-5)
-        c.put('learning_rate_end', 2.5e-5)
-        c.put('learning_rate_decay_steps', 500000)
-        c.put('learning_rate', args.learning_rate)
+        c.put('learning_rate_start', 0.001)
+        c.put('learning_rate_end', 0.001)
+        c.put('learning_rate_decay_steps', 0)
+        c.put('learning_rate', 0.001)
 
-        c.put('follower_update_steps', 300)
+        c.put('follower_update_steps', 1)
 
         name = '%s.%d' % (c.get("game"), time.time())
         c.put('output_path', 'output/' + name)
@@ -35,7 +35,7 @@ class breakout(object):
         c.put('global_step_reset', True)
 
         c.put('reward_mean_alpha', 0.9)
-        c.put('clip_gradient_norm', 1.)
+        c.put('clip_gradient_norm', 0.1)
         c.put('xentropy_reg_beta', 0.01)
         #c.put('policy_reg_beta', 0.01)
 
