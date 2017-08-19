@@ -30,7 +30,7 @@ class env_holder(object):
 
     def new_state(self, obs):
         state = obs[35:195]
-        state = state[::, ::, 0]
+        state = np.mean(state, axis=2)
 
         state = state.astype(np.float32)
         res = cv2.resize(state, (self.input_shape[0], self.input_shape[1]))
